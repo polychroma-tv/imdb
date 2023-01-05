@@ -4,6 +4,7 @@ type = "webpack"
 account_id = ""
 workers_dev = true
 route = ""
+main: "src/index.js"
 zone_id = ""
 compatibility_date = "2022-05-27"
 kv_namespaces = [
