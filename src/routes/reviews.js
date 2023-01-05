@@ -48,7 +48,7 @@ reviews.get("/:id", async (c) => {
 
     let parser = new DomParser();
     let rawHtml = await apiRequestRawHtml(
-      `https://www.imdb.com/title/${id}/reviews/_ajax?sort=${
+      `https://www.imdb.com/title/tt${id}/reviews/_ajax?sort=${
         option.key
       }&dir=${sortOrder}${nextKey ? `&paginationKey=${nextKey}` : ""}`
     );
@@ -149,12 +149,12 @@ reviews.get("/:id", async (c) => {
     try {
       let morePage = dom.getElementsByClassName("load-more-data")[0];
       next = morePage.getAttribute("data-key");
-      next = `/reviews/${id}?option=${option.name}&sortOrder=${sortOrder}&nextKey=${next}`;
+      next = `/reviews/tt${id}?option=${option.name}&sortOrder=${sortOrder}&nextKey=${next}`;
     } catch (_) {}
 
     let result = {
       id,
-      imdb: `https://www.imdb.com/title/${id}`,
+      imdb: `https://www.imdb.com/title/tt${id}`,
       option: option.name,
       sortOrder,
       availableOptions: optionsMapper.map((option) => option.name),
