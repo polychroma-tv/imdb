@@ -25,7 +25,7 @@ title.get("/:id", async (c) => {
 
   try {
     let parser = new DomParser();
-    let rawHtml = await apiRequestRawHtml(`https://www.imdb.com/title/${id}`);
+    let rawHtml = await apiRequestRawHtml(`https://www.imdb.com/title/tt${id}`);
 
     let dom = parser.parseFromString(rawHtml);
 
@@ -39,10 +39,10 @@ title.get("/:id", async (c) => {
     response.id = id;
 
     // review
-    response.review_api_path = `/reviews/${id}`;
+    response.review_api_path = `/reviews/tt${id}`;
 
     // imdb link
-    response.imdb = `https://www.imdb.com/title/${id}`;
+    response.imdb = `https://www.imdb.com/title/tt${id}`;
 
     // content type
     response.contentType = schema["@type"];
