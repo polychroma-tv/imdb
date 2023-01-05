@@ -1,0 +1,11 @@
+name = "imdb"
+type = "webpack"
+
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2022-05-27"
+kv_namespaces = [
+         { binding = "CACHE", id = "c38082dceded4f428b770de738ec96b6" }
+]

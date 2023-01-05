@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "name": "imdb",
+  "version": "1.0.0",
+  "description": "Serverless IMDB API",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "miniflare --watch --debug --kv CACHE --kv-persist --port 3000",
+    "publish": "wrangler publish",
+    "test": "jest"
+  },
+  "author": "Polychroma, LLC",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@cloudflare/wrangler": "^1.19.12",
+    "axios": "^0.27.2",
+    "jest": "^28.1.0",
+    "miniflare": "^2.8.2"
+  },
+  "dependencies": {
+    "dom-parser": "^0.1.6",
+    "hono": "^1.4.1",
+    "html-entities": "^2.3.3"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polychroma-tv/imdb.git"
+  },
+  "keywords": [
+    "imdb",
+    "imdb-api",
+    "movie-list",
+    "cloudflare-worker",
+    "cloudflare-workers"
+  ],
+  "bugs": {
+    "url": "https://github.com/polychroma-tv/imdb/issues"
+  },
+  "homepage": "https://github.com/polychroma-tv/imdb-api#readme"
+}
