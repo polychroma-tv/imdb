@@ -8,7 +8,7 @@ export default async function seriesFetcher(id) {
   try {
     let parser = new DomParser();
     let rawHtml = await apiRequestRawHtml(
-      `https://www.imdb.com/title/${id}/episodes/_ajax`
+      `https://www.imdb.com/title/tt${id}/episodes/_ajax`
     );
     let dom = parser.parseFromString(rawHtml);
 
