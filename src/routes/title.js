@@ -58,12 +58,6 @@ title.get("/:id", async (c) => {
     // response.plot = getNode(dom, "span", "plot-l").innerHTML;
     response.plot = entityDecoder(schema.description, { level: "html5" });
 
-    // rating
-    response.rating = {
-      count: schema.aggregateRating.ratingCount,
-      star: schema.aggregateRating.ratingValue,
-    };
-
     // content rating
     response.contentRating = schema.contentRating;
 
